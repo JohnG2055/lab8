@@ -39,6 +39,7 @@ if ('development' == app.get('env')) {
 // Add routes here
 app.get('/', index.view);
 app.get('/rsvp', rsvp.adminView);
+app.post('/addRSVP', rsvp.addRSVP);
 
 // Example route
 // app.get('/users', user.list);
@@ -46,3 +47,4 @@ app.get('/rsvp', rsvp.adminView);
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
 });
+
